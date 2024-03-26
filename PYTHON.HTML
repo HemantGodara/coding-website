@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <hr>
+    <h3 style="color: blue;">CLASS 1</h3>
+    <hr>
+    <h1 style="color: blue;">Some code of python</h1>
+    <pre style="color: blue;">
+
+        import turtle 
+        turtle.Screen().setup(560,560) 
+        import grid 
+        turtle.fillcolor("___") 
+        turtle.penup() 
+        turtle.goto(__,__) 
+        turtle.pendown() 
+        turtle.fillcolor("___") 
+        turtle.begin_fill() 
+        turtle.right(__) 
+        turtle.left(__) 
+        turtle.forward(__) 
+        turtle.end_fill() 
+        turtle.hideturtle() 
+    <hr>
+    <h3>CLASS 2</h3>
+    <pre>
+screen = turtle.Screen()
+screen.setup(400, 600)
+screen.bgcolor("black")
+    turtle.forward(size)
+draw_star(-__, __, __, "white")
+def draw_crater(x, y, size, color):
+    turtle.goto(x, y)
+    turtle.dot(size, color)
+    </pre>
+    <hr>
+    <h3>Class 3</h3>
+    <pre>
+        import random
+        from satellite import *
+        turtle.speed(0)
+        def draw_star(x, y, size):
+            for i in range(5):
+        for i in range(20):
+            x = random.randint(-___,___)
+            y =  random.randint(-___, ___)
+            
+            # Create size variable
+            size = random.randint(10, 20)
+            draw_star(x, y, size)
+            
+            # Replace the value 10 by "size" variable
+            draw_star(x, y, 10)
+        x = random.randint(-____, ____)
+        y =  random.randint(-___, ___)
+        draw_satellite(x, y)
+        
+        def draw_crater(x, y, size, color): 
+            turtle.dot(size, color)
+        turtle.color("deepskyblue")
+        turtle.write("SPACE SHOOTER", font = ("Arial", 28, "bold"))
+        turtle.hideturtle()
+    </pre>
+    <h1>Class4</h1>
+    <pre>
+        screen.bgcolor("black")
+        screen.bgpic("background.png")
+        screen.register_shape("spaceship.png")
+        turtle.shape("spaceship.png")
+        def move_right():
+            x = turtle.xcor() 
+            y = turtle.ycor()
+            turtle.goto(x + 10, y)
+        def move_left():
+            x = turtle.xcor() 
+            y = turtle.ycor()
+            turtle.goto(x - 10, y)
+        screen.listen()
+        screen.onkey("right",move_right)
+        screen.onkey("left", move_left)        
+    </pre>
+    <h3>Class5</h3>
+    <pre>
+        asteroid_img = "asteroid.png"
+        screen.register_shape(asteroid_img)
+        
+        # Create an asteroid turtle
+        asteroid = turtle.Turtle()
+        
+        # Assign the asteroid image to the asteroid turtle
+        asteroid.shape(asteroid_img)
+        ____.penup()
+        ______.goto(0, 270)
+        _____ move_left():
+            
+            # Add restrictions to the spaceship movement from left side
+            asteroid() function to reset the asteroid
+        ___ reset_asteroid():
+            if asteroid.ycor() <= -330:
+                
+                # Hide the asteroid turtle
+                ____.hideturtle()
+                
+        # Move the asteroid until it crosses the bottom edge of the screen
+        while asteroid.ycor() > -330:
+            
+            # Current asteriod position
+            asteroid_x = asteroid.xcor()
+            asteroid_y = asteroid.ycor()
+            
+            # Move the asteroid
+            asteroid.goto(asteroid_x, asteroid_y - 10)
+            
+            # Call the reset_asteroid() function to reset the asteroid
+            reset________()
+    </pre>
+    <h3>Class6</h3>
+    <pre>
+        blast_img = "___________"
+        screen.register_shape(_____________)
+        while True:
+            asteroid_x = asteroid.xcor()
+            asteroid_y = asteroid.ycor()
+            asteroid.goto(asteroid_x,asteroid_y - 5)
+            distance = spaceship.distance(asteroid)
+            if(distance <= 67):
+                spaceship.shape(blast_img)
+    </pre>
+    <h3>Class7</h3>
+    <pre>
+        bullet_state = "loaded"
+        def fire():
+            def destroy_asteroid():
+                global bullet_state
+            if bullet.distance(asteroid) <= 34:
+                # Change the bullet_state to True
+                bullet_state = "loaded"
+                bullet.hideturtle()
+                bullet.goto(spaceship.xcor(), spaceship.ycor())
+                asteroid.hideturtle()
+                asteroid.goto(random.randint(-170, 170), 270)
+                asteroid.showturtle()
+                
+                   # Check if the bullet has reached the top boundary
+            if bullet.ycor() > 300:
+                bullet_state = "loaded"
+            # Check if the bullet_state is "loaded"
+            if bullet_state == 'loaded':
+                spaceship_x = spaceship.xcor()
+                spaceship_y = spaceship.ycor()
+        screen.onkey("Space", fire)
+            if spaceship.distance(asteroid) <= 67:
+                spaceship.shape(blast_img)
+                break
+    </pre>
+    <h3>Class8</h3>
+    <pre>
+
+        # Score turtle
+        score_turtle = turtle.Turtle()
+        score_turtle.speed(0)
+        score_turtle.color("white")
+        score_turtle.penup()
+        score_turtle.goto(-190, 230)
+        score_turtle.pendown()
+        score_turtle.hideturtle()
+        
+        # Create a variable score and set it's value to 0
+        score = 0
+        
+        # Lives turtle
+        lives_turtle = turtle.Turtle()
+        lives_turtle.speed(0)
+        lives_turtle.color("white")
+        lives_turtle.penup()
+        lives_turtle.goto(80, 230)
+        lives_turtle.pendown()
+        lives_turtle.hideturtle()
+        
+        # Create a variable lives and set it's value to 5
+        lives = 5
+                score = score + 1    
+        def display_score():
+            global score
+            score_turtle.clear()
+            score_turtle.write("Score: " + str(score), font=("Arial", 20, "bold"))
+        def display_lives():
+            global lives
+        screen.tracer(0)
+        while asteroid.ycor() > -330:
+                    if lives > 0:
+                        lives = lives - 1
+                        asteroid.hideturtle()
+                        asteroid.goto(random.randint(-170, 170), 270)
+                        asteroid.showturtle()
+                if lives == 0:
+                    game_state = "over"
+            display_score()
+            
+            # Call display_lives() function
+            lives_turtle.clear()
+            lives_turtle.write("Lives: " + str(lives), font=("Arial", 20, "bold"))
+                    
+            # Update the screen
+            screen.update()
+    </pre>
+    <h3>Class9</h3>
+    <pre>
+    from processing import *
+from game import *
+
+zonan = {"x":280, "y":130, "w":65, "h":110}
+kyla = {"x":340, "y":130, "w":40, "h":100}
+
+# Change x and y positions of Zonan to reach Kyla and then the Guard
+zonan = {"x":100, "y":300, "w":65, "h":110}
+zonan = {"x":500, "y":150, "w":65, "h":110}
+guard = {"x":570, "y":160, "w":75, "h":120}
+
+def setup():
+    size(900, 519)
+    
+    global bgImg, zonanImg, kylaImg, guardImg
+   
+    bgImg = loadImage("assets/background.png")
+    kylaImg = loadImage("assets/kyla.png")
+    zonanImg = loadImage("assets/zonan.png")    
+    guardImg = loadImage("assets/guard.png")
+    
+    # This function initialises the game elements
+    gameInit()
+    
+def draw():    
+    background(bgImg)
+
+    #This function displays markers and dialogue of the game characters
+    play(zonan, kyla, guard)
+    
+    image(kylaImg, kyla["x"], kyla["y"], kyla["w"], kyla["h"])
+    image(zonanImg, zonan["x"], zonan["y"], zonan["w"], zonan["h"])
+    image(guardImg, guard["x"], guard["y"], guard["w"], guard["h"])
+    
+run()
+    </pre>
+    <h3>Class10</h3>
+    <pre>
+    from processing import *
+from helper import *
+from game import *
+def setup():
+    size(1024, 768)
+    global zonanImg
+    zonanImg = loadImage("assets/zonan.png")
+    gameInit()
+def draw():
+    play(zonan)
+    image(zonanImg, zonan["x"], zonan["y"], zonan["w"], zonan["h"])
+    zonan["x"] = zonan["x"] + zonan["velX"]
+    zonan["y"] = zonan["y"] + zonan["velY"]
+def keyPressed():   
+    if keyboard.keyCode == RIGHT:
+        zonan["velX"] = 2
+    if keyboard.keyCode == LEFT:
+        zonan["velX"] = -2
+    if keyboard.keyCode == UP:
+        zonan["velY"] = -2
+    if keyboard.keyCode == DOWN:
+        zonan["velY"] = 2
+    def keyReleased():
+        if keyboard.keyCode == LEFT:
+            zonan["velX"] = 0
+        if keyboard.keyCode == UP:
+            zonan["velY"] = 0
+        if keyboard.keyCode == DOWN:
+            zonan["velY"] = 0
+        if keyboard.keyCode == RIGHT:
+            zonan["velX"] = 0
+run()
+    </pre>
+    <h3>Class11</h3>
+    <pre>
+        idle = ["assets/zonanIdle/0.png",
+        "assets/zonanIdle/1.png",
+        "assets/zonanIdle/2.png",
+        "assets/zonanIdle/3.png",
+        "assets/zonanIdle/4.png",
+        "assets/zonanIdle/5.png",
+        "assets/zonanIdle/6.png",
+        "assets/zonanIdle/7.png",
+        "assets/zonanIdle/8.png",
+        "assets/zonanIdle/9.png",
+        "assets/zonanIdle/10.png",
+        "assets/zonanIdle/11.png",
+        "assets/zonanIdle/12.png"]
+  
+  
+  # List of images for walking left animation
+  walkLeft = ["assets/zonanWalk/left/0.png",
+            "assets/zonanWalk/left/1.png",
+            "assets/zonanWalk/left/2.png",
+            "assets/zonanWalk/left/3.png",
+            "assets/zonanWalk/left/4.png",
+            "assets/zonanWalk/left/5.png",
+            "assets/zonanWalk/left/6.png",
+            "assets/zonanWalk/left/7.png",
+            "assets/zonanWalk/left/8.png",
+            "assets/zonanWalk/left/9.png",
+            "assets/zonanWalk/left/10.png",
+            "assets/zonanWalk/left/11.png",
+            "assets/zonanWalk/left/12.png"]
+  
+  
+  # List of images for walking right animation
+  walkRight = ["assets/zonanWalk/right/0.png",
+                "assets/zonanWalk/right/1.png",
+                "assets/zonanWalk/right/2.png",
+                "assets/zonanWalk/right/3.png",
+                "assets/zonanWalk/right/4.png",
+                "assets/zonanWalk/right/5.png",
+                "assets/zonanWalk/right/6.png",
+                "assets/zonanWalk/right/7.png",
+                "assets/zonanWalk/right/8.png",
+                "assets/zonanWalk/right/9.png",
+                "assets/zonanWalk/right/10.png",
+                "assets/zonanWalk/right/11.png",
+                "assets/zonanWalk/right/12.png"]
+
+  
+  # List of images for knock animation
+  knock = ["assets/zonanKnock/0.png","assets/zonanKnock/1.png",
+          "assets/zonanKnock/2.png","assets/zonanKnock/3.png",
+          "assets/zonanKnock/4.png","assets/zonanKnock/5.png",
+          "assets/zonanKnock/6.png","assets/zonanKnock/7.png",
+          "assets/zonanKnock/8.png","assets/zonanKnock/9.png",
+          "assets/zonanKnock/10.png","assets/zonanKnock/11.png"]
+  
+  
+  # List of images for kick animation
+  kick = ["assets/zonanKick/0.png","assets/zonanKick/1.png",
+        "assets/zonanKick/2.png","assets/zonanKick/3.png",
+        "assets/zonanKick/4.png","assets/zonanKick/5.png",
+        "assets/zonanKick/6.png","assets/zonanKick/7.png",
+        "assets/zonanKick/8.png","assets/zonanKick/9.png",
+        "assets/zonanKick/10.png"]
+  
+  
+  # List of images for defense animation
+  defense = ["assets/zonanDefense/1.png",
+          "assets/zonanDefense/2.png","assets/zonanDefense/3.png",
+         "assets/zonanDefense/4.png", "assets/zonanDefense/5.png",
+         "assets/zonanDefense/6.png", "assets/zonanDefense/7.png",
+         "assets/zonanDefense/8.png"]
+
+  # Load Zonan's idle animation
+  zonan["idle"]=loadAnimation(idle)
+  
+  # Load the walking left animation for Zonan
+  zonan["walkLeft"]=loadAnimation(walkLeft)
+  
+  # Load the walking right animation for Zonan
+  zonan["walkRight"]=loadAnimation(walkRight)
+  
+  # Load Zonan's knock animation
+  zonan["knock"]=loadAnimation(knock)
+  
+  # Load Zonan's defense animation
+  zonan["defense"]=loadAnimation(defense)
+  
+  # Load Zonan's kick animation
+  zonan["kick"] = loadAnimation(kick)
+  
+  # Set default animation for Zonan
+  zonan["animation"] = zonan["idle"]   
+  
+  # This function initializes additional game elements
+  gameInit()
+  
+  
+def draw():
+  # This function controls additional game mechanics
+  play(zonan)
+
+  # Display Zonan's animation using Zonan's dictionary
+  display(zonan, zonan["animation"], 2)
+
+  zonan["x"] = zonan["x"] + zonan["velX"]
+  zonan["y"] = zonan["y"] + zonan["velY"]
+
+def keyPressed():
+  if keyboard.keyCode == LEFT:
+      zonan["velX"] = -2
+      # Change animation to walking left on the left keypress
+      zonan["animation"] = zonan["walkLeft"]
+  
+  if keyboard.keyCode == RIGHT:
+      zonan["velX"] = 2
+      # Change animation to walking right on the right keypress
+      zonan["animation"]= zonan["walkRight"]
+
+  # Change animation to knock on the down keypress
+  if keyboard.keyCode == DOWN:
+      zonan["animation"] = zonan["knock"]
+      
+  # Change animation to defense on the up keypress
+  if keyboard.keyCode == UP:
+      zonan["animation"] = zonan["defense"]
+      
+  # Change animation to kick on the shift keypress
+  if keyboard.keyCode == SHIFT:
+      zonan["animation"] = zonan["kick"]
+      
+
+def keyReleased():
+  zonan["velX"] = 0
+  
+  # Change animation to idle animation
+  zonan["animation"] = zonan["idle"]
+  
+  
+run()
+
+    </pre>
+    <h3>Class</h3>12
+    <pre>
+ play(zonan, cloud)
+            zonan["velY"] = zonan["velY"] + gravity
+            display 
+            gravity = 0.1
+        jump = "disabled"
+        def setup():
+            size(900, 420)
+            cloud["animation"] = loadAnimation(["assets/cloud/0.png", "assets/cloud/1.png", "assets/cloud/2.png", "assets/cloud/3.png", "assets/cloud/4.png", "assets/cloud/5.png", "assets/cloud/6.png", "assets/cloud/7.png", "assets/cloud/8.png", "assets/cloud/9.png", "assets/cloud/10.png", "assets/cloud/11.png", "assets/cloud/12.png"])
+            gameInit(zonan)
+            global jump
+            (cloud, cloud["animation"])
+            display(zonan, zonan["animation"], 2)
+            if isTouching(zonan, cloud):
+                jump = "enabled"
+        def keyPressed():
+            global jump
+                zonan["y"] = cloud["y"] - zonan["h"]
+        if jump == "enabled":
+            zonan["velY"] = -5
+            zonan["y"] = cloud["y"] - zonan["h"]
+            jump = "disabled"
+    </pre>
+    <pre>
+        <form action="Information of coding.html">
+<button style="color: blue;"><b><i>Click here for more information and images of coding</i></b></button>
+        </form>
+    </pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  border: border-box;
+  text-transform: capitalize;
+}
+#navbar{
+  height: 90px;
+  background-color:purple;
+}
+#logo{
+  color: #f08804;
+  font-size: 25px;
+}
+.margin{
+  margin-right: 150px;
+  color: blue;
+}
+.search-bar{
+  width: 100%;
+  max-width: 700px;
+  background:rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+  margin-right: 50px;
+  border-color: black;
+}
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 10px 50px;
+  font-size: 15px;
+  color: #cac7ff;
+}
+::placeholder{
+  color: #cac7ff;
+}
+.search-bar button{
+  width: 25px;
+}
+.search-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background:#58629b;
+  cursor: pointer;
+
+}
+button{
+  color: blue;
+  background-color: white;
+  font-size: 50px 100px;
+  text-transform: capitalize;
+}
+select{
+  background-color: yellow;
+  text-transform: capitalize;
+}
+body{
+  background-color:rgb(15, 15, 15);
+  text-transform: capitalize;
+}
+iframe{
+  background-color: black;
+  color: black;
+}
+input {
+  background-color: blue;
+  text-transform: capitalize;
+  border-style:solid;
+
+}
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+  color: blueviolet;
+  text-transform: capitalize;
+}
+button{
+  background-color: aqua;
+  text-transform: capitalize;
+  border-color: blue;
+}
+.button{
+  background-color: aqua;
+  text-transform: capitalize;
+  border-color: blue;
+  text-align: center;
+  border-color: blue;
+}
+#details{
+  text-align: center;
+}
+hr{
+  color: blue;
+}
+textarea{
+  background-color: yellow;
+}
+#heading1{
+  color: red;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.red{
+  color: red;
+  text-transform: capitalize;
+}
+.blue{
+  color: rgb(105, 105, 255);;
+  text-transform: capitalize;
+}
+.bleu{
+  color: blue;
+  text-transform: capitalize;
+}
+.redred{
+  color: rgb(225, 0, 0);;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.skyblue{
+  color: skyblue;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+#details{
+  text-align: center;
+  text-transform: capitalize;
+  border-style: double;
+}
+p{
+  text-decoration: none;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: normal;
+  text-transform: capitalize;
+s{
+  color: blueviolet;
+  text-transform: capitalize;
+}  
+}
+a{
+  text-decoration: none;
+  text-transform: capitalize;
+}
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+  background-color: white;
+}
+
+th[scope='col'] {
+  background-color: #505050;
+  color: white;
+}
+
+th[scope='row'] {
+  background-color: white;
+}
+
+td {
+  text-align: center;
+  background-color: white;
+}
+
+tr:nth-of-type(even) {
+  background-color: white;
+}
+
+table {
+  
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+
+  font-family: sans-serif;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 1px;
+}
+
+caption{
+
+  caption-side: bottom;
+
+  padding: 10px;
+
+  color: blue;
+
+  border-style: double;
+}
+
+#gun{
+
+  border-radius: 100%;
+
+  height: 300px;
+
+  width: 300px;
+
+  background-color: aquamarine;
+
+  color: steelblue;
+
+  text-align:center;
+
+  padding-left:300;
+
+  padding-right:300;
+
+  padding-top:300;
+
+  padding-bottom:300;
+.hello{
+  border-radius: 100%;
+
+  height: 300px;
+
+  width: 300px;
+
+  background-color: aquamarine;
+
+  color: steelblue;
+
+  text-align: center;
+
+  padding-left:300;
+
+  padding-right:300;
+
+  padding-top:300;
+
+  padding-bottom:300;
+}
+
+}
+
+

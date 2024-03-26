@@ -1,0 +1,157 @@
+import turtle
+import random
+
+screen = turtle.Screen()
+screen.setup(1600, 1000)
+screen.bgpic("background.jpg")
+
+# Player image
+player_img = "player.png"
+screen.register_shape(player_img)
+
+# Soccer ball image
+soccer_ball_img = "soccer_ball.png"
+screen.register_shape(soccer_ball_img)
+
+# Game over image
+screen.register_shape("game_over.png")
+
+# Soccer ball turtle
+soccer_ball = turtle.Turtle()
+soccer_ball.penup()
+soccer_ball.goto(0, -450)
+soccer_ball.shape(soccer_ball_img)
+soccer_ball.speed()
+
+# Player turtle
+player = turtle.Turtle()
+player.penup()
+player.goto(-10, 50)
+player.shape(player_img)
+player.speed(0)
+
+# Start message turtle
+start_msg = turtle.Turtle()
+start_msg.speed(0)
+start_msg.hideturtle()
+
+start_msg.penup()
+start_msg.goto(-150, -150)
+start_msg.pendown()
+start_msg.color("white")
+
+# Game over message turtle
+go_msg = turtle.Turtle()
+go_msg.penup()
+go_msg.speed(0)
+go_msg.hideturtle()
+go_msg.shape("game_over.png")
+
+# Score turtle
+score_turtle = turtle.Turtle()
+score_turtle.color("white")
+score_turtle.penup()
+score_turtle.goto(-50, 390)
+score_turtle.hideturtle()
+
+# Create a variable named score and set it's value to 0
+score = 0
+
+# Create a variable named game_state and set it's value to "initial"
+game_state = "initial"
+
+# Function to move the player to the left
+def move_left():
+    global game_state
+    if player.xcor() >= -250:
+        if game_state == "play":
+            player_x = player.xcor() - 20
+            player_y = player.ycor()
+            player.goto(player_x, player_y)
+
+# Function to move the player to the right
+def move_right():
+    global game_state
+    if player.xcor() <= 230:
+        if game_state == "play":
+            player_x = player.xcor() + 20
+            player_y = player.ycor()
+            player.goto(player_x, player_y)
+
+# Create a function named start() to start the game
+def start():
+    global game_state
+
+    # Check if the value of the variable game_state is "initial"
+    if game_state == "initial":
+        game_state = "play"
+        start_msg.clear()
+
+# Check the collision between the soccer ball and the player
+def check_collision():
+    global score
+    if player.distance(soccer_ball) <= 120:
+        x = random.randint(-230, 200)
+        y = -500
+        soccer_ball.speed(3)
+        soccer_ball.goto(x, y)
+        score += 1
+        
+        display_score()
+def reset_soccer_ball():
+    if soccer_ball.ycor() > 480:
+        soccer_ball.hideturtle()
+        soccer_ball.goto(0, -450)
+        soccer_ball.showturtle()
+        
+def display_score():
+    global score
+    score_turtle.clear()
+    score_turtle.write(score, font=("Arial", 70, "bold"))
+    score_turtle.hideturtle()
+    screen.update()
+
+# Capture the keypress and call the respective functions
+screen.listen()
+screen.onkey("left", move_left)
+screen.onkey("right", move_right)
+screen.onkey("s", start)
+
+# Infinite loop to move the soccer ball
+start_ycor = 70
+end_ycor = 200
+
+while soccer_ball.ycor() > -490:
+    
+    # Display the score
+    display_score()
+    
+    # Check whether the value of the variable game_state is "initial"
+    if game_state == "initial":
+        start_msg.write("Press 's' to Start", font = ("Arial", 30, "bold"))
+        
+    # Check whether the value of the variable game_state is "play"
+    if game_state == "play":
+        soccer_ball.showturtle()
+        reset_soccer_ball()
+
+        # Call the check_collision() function
+        check_collision()
+
+        if soccer_ball.xcor() <= 250:
+            soccer_ball.speed(0)
+            soccer_ball.left(10)
+            soccer_ball.goto(soccer_ball.xcor(), soccer_ball.ycor() + 20)
+
+        # Check the collision between the net and the soccer ball
+        if start_ycor <= soccer_ball.ycor() <= end_ycor:
+            game_state = "over"
+    
+    # Add an exit condition
+    if game_state == "over":
+        go_msg.goto(0, -200)
+        go_msg.showturtle()
+        screen.update()
+        
+    # Update the screen
+    screen.update()
